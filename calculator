@@ -1,0 +1,78 @@
+import java.util.Scanner;
+class calculator
+{
+    int num1;
+    int num2;
+    float result;
+    
+    void addition()
+    {
+        result=num1+num2;
+    }
+    void substraction()
+    {
+        result=num1-num2;
+    }
+    void division()
+    {
+        result=num1/num2;
+    }
+    void multiplication()
+    {
+        result=num1*num2;
+    }
+}
+
+public class Practice 
+{
+
+    public static void main(String[] args) 
+    {
+        Scanner sc = new Scanner(System.in);
+        calculator calc = new calculator();
+        System.out.println("Enter your choise 1.addition,2:substraction,3:multiplication,4:division:-");
+        int n=sc.nextInt();
+        if(n==4)
+            System.out.println("Enter divident and divisor");
+        else
+        {
+        System.out.println("enter 2 numbers:-");
+        }
+        int a=sc.nextInt();
+        int b=sc.nextInt();
+        
+        switch(n)
+        {
+            case 1:
+                calc.num1=a;
+                calc.num2=b;
+                calc.addition();
+                break;
+                
+            case 2:
+                calc.num1=a;
+                calc.num2=b;
+                calc.substraction();
+                break; 
+            
+           
+            case 3:
+                calc.num1=a;
+                calc.num2=b;
+                calc.multiplication();
+                break;
+                
+            case 4:
+                calc.num1=a;
+                calc.num2=b;
+                calc.division();
+                break;
+            
+            default:
+                System.out.println("Invalid entry");
+                
+        }
+        System.out.println(calc.result);        
+    }
+        
+} 
